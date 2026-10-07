@@ -45,6 +45,18 @@ tasks, and comments.
 
 Install the dependencies listed in `requirements.txt`.
 
+## Get both projects
+
+Clone both repositories into the same parent folder. This creates the
+`Kan-Mind-Backend` and `Kan-Mind-Frontend` folders next to each other:
+
+    mkdir KanMind
+    cd KanMind
+    git clone https://github.com/VitaliBanmann/Kan-Mind-Backend.git
+    git clone https://github.com/VitaliBanmann/Kan-Mind-Frontend.git
+
+Then open a terminal in `Kan-Mind-Backend` and follow the local setup below.
+
 ## Local setup
 
 1. Create a virtual environment:
