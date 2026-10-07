@@ -85,6 +85,12 @@ The API is normally available at `http://127.0.0.1:8000/`. The project apps
 have no migration files; Django's built-in apps continue to use Django's
 provided migrations.
 
+## Frontend
+
+The frontend is maintained separately at
+`https://github.com/VitaliBanmann/Kan-Mind-Frontend`. Its API configuration
+defaults to this backend at `http://127.0.0.1:8000/api/`.
+
 ## Tests and coverage
 
 Run the complete test suite:
