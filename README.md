@@ -101,7 +101,7 @@ The test suite currently contains 121 tests.
 
 Run the tests with coverage and check the 95% threshold:
 
-    coverage run --source=auth_app,board_app,task_app,core --omit="*/tests/*,*/migrations/*" manage.py test
+    coverage run --source=auth_app,board_app,task_app,core --omit="*/tests/*" manage.py test
     coverage report --show-missing --fail-under=95
 
 ## API overview
