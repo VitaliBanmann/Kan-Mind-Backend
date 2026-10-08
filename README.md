@@ -85,17 +85,24 @@ Then open a terminal in `Kan-Mind-Backend` and follow the local setup below.
    created at `db.sqlite3` in this backend directory. This database file is
    also ignored by Git.
 
-5. Create or synchronize local database tables:
+5. Create or update local database tables:
 
-       python manage.py migrate --run-syncdb
+       python manage.py migrate
 
 6. Start the development server:
 
        python manage.py runserver
 
-The API is normally available at `http://127.0.0.1:8000/`. The project apps
-have no migration files; Django's built-in apps continue to use Django's
-provided migrations.
+The API is normally available at `http://127.0.0.1:8000/`. Project apps and
+Django's built-in apps use the standard migration workflow. When changing a
+model, create a migration with `python manage.py makemigrations` and apply it
+with `python manage.py migrate`.
+
+For an existing local database created before these initial migrations, make
+a backup first. If all existing project tables match the current models, run
+`python manage.py migrate --fake-initial` once to record the initial migrations
+without recreating those tables. If tables are missing or differ, migrate a
+clean database with `python manage.py migrate` and restore any needed data.
 
 ## Frontend
 

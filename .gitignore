@@ -48,6 +48,3 @@ htmlcov/
 dist/
 build/
 *.egg-info/
-auth_app/migrations/
-board_app/migrations/
-task_app/migrations/
